@@ -1,0 +1,12 @@
+<h1>Songs</h1><br>
+<h3><%= @song.title %></h3>
+<h5><%= @song.genre.name %></h5>
+
+<iframe width="560" height="315" src=<%= @song.song_video %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<br>
+<p><%= link_to "Edit!", edit_song_path(@song) %></p>
+<p><%= link_to 'Delete..', delete_song_path(@song),
+:confirm => 'Are you sure?', :method => :delete %> 
+<p><%= link_to "Songs", songs_path %></p>

@@ -1,0 +1,13 @@
+<h1>Genres</h1>
+<p><strong>All Possible Genres</strong></p>
+<ul>
+    <% @genres.sort.each do |genre| %>
+        <li><%= link_to genre.name, genre_path(genre) %></li>
+    <% end %>
+</ul>
+
+<br>
+<p><%= link_to 'Artists', artists_path %></p>
+<p><%= link_to 'Songs', songs_path %></p>
+<p><%= link_to 'Reviewers', users_path %></p>
+<p><%= link_to 'Reviews', reviews_path %></p>

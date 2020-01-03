@@ -1,0 +1,12 @@
+<h1>Artists</h1><br>
+<h3><%= @artist.name %></h3>
+<h6><em><%= @artist.year %></em></h6>
+<p><strong>Bio: </strong></p>
+<p><%= @artist.artist_bio %></p><br>
+
+<ul><% @songs.select {|song| song.artist == @artist }.each do |s| %>
+    <li><%= link_to s.title, song_path(s) %></li>
+<% end %></ul>
+
+<br>
+<p><%= link_to "Artists", artists_path %></p>

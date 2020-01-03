@@ -1,0 +1,14 @@
+<h1>Reviewers</h1><br>
+<h3><%= @user.name %></h3>
+
+<p><strong>Bio: </strong></p>
+<p><%= @user.display_bio %></p><br>
+
+<p><strong><em>Reviewed by <%= @user.name %>: </em></strong></p>
+
+<ul><% @user.reviews.each do |rev| %>
+    <li><%= link_to rev.song.title, review_path(rev)  %></li>
+<% end %></ul>
+<br>
+<p><%= link_to "Edit!", edit_user_path(@user) %></p>
+<p><%= link_to "Reviewers", users_path %></p>

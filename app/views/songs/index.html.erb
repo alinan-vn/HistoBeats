@@ -1,0 +1,18 @@
+<h1>Songs</h1>
+<p><strong>List of Songs</strong></p>
+<ul>
+    <% @songs.sort_by(&:artist_id).each do |song| %>
+        <li><%= link_to song.title, song_path(song) %> by <em><%= song.artist.name %></em></li>
+    <% end %>
+</ul>
+
+
+<br>
+<p><%= link_to 'Add a Song', new_song_path %></p>
+
+
+<br>
+<p><%= link_to 'Artists', artists_path %></p>
+<p><%= link_to 'Reviewers', users_path %></p>
+<p><%= link_to 'Genres', genres_path %></p>
+<p><%= link_to 'Reviews', reviews_path %></p>

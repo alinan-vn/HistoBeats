@@ -1,0 +1,9 @@
+<h1>Genres</h1><br>
+<h3><%= @genre.name %></h3><br>
+<p><strong>Here are songs that belong to this Genre!</strong></p>
+<ul><% @songs.select {|song| song.genre == @genre}.each do |song| %>
+    <li><%= link_to song.title, song_path(song) %></li>
+<% end %>
+
+
+<p><%= link_to "Genres", genres_path %></p>

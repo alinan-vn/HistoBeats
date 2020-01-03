@@ -1,0 +1,10 @@
+<h1>Artists</h1><br>
+<h3>Sign Up!</h3>
+<%= form_tag ({controller: 'artists', action: 'create', method: 'post'}) do %>
+    <p>Name: </p><input type=text id='artist_name' name="artist[name]"><br>
+    <p>Year Formed: </p><input type=integer id='artist_year' name="artist[year]"><br>
+    <p>Bio: </p><input type=text_area id='bio' name="artist[artist_bio]"></br>
+    <p>Password: </p><input type=text id='password' name="artist[password]"><br> 
+    <p>Password Confirmation: </p><input type=text id='artist_password_confirmation' name="artist[password_confirmation]"><br> 
+    <input type=submit value="Sign Up!">
+<% end %> 

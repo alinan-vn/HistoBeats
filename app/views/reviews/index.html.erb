@@ -1,0 +1,18 @@
+<h1>Reviews</h1>
+<p><strong>List of Reviews</strong></p>
+<ul>
+    <% @reviews.sort_by(&:user_id).each do |review| %>
+        <li><%= link_to review.song.title, review_path(review) %> written by <em><%= review.user.name %></em></li>
+    <% end %>
+</ul>
+
+
+<br>
+<p><%= link_to 'Review Something!', new_review_path %></p>
+
+
+<br>
+<p><%= link_to 'Artists', artists_path %></p>
+<p><%= link_to 'Songs', songs_path %></p>
+<p><%= link_to 'Genres', genres_path %></p>
+<p><%= link_to 'Reviews', reviews_path %></p>

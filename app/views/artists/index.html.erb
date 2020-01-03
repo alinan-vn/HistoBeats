@@ -1,0 +1,17 @@
+<h1>Artists</h1><br>
+<p><strong>List of Artists</strong></p>
+<ul>
+    <% @artists.each do |artist| %>
+        <li><%= link_to artist.name, artist_path(artist) %></li>
+    <% end %>
+</ul>
+
+<br>
+<p><%= link_to 'login', new_artist_path %></p>
+<p><%= link_to 'sign up', new_artist_path %></p>
+
+<br>
+<p><%= link_to 'Reviewers', users_path %></p>
+<p><%= link_to 'Songs', songs_path %></p>
+<p><%= link_to 'Genres', genres_path %></p>
+<p><%= link_to 'Reviews', reviews_path %></p>
