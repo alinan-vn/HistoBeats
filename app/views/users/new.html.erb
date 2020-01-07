@@ -1,8 +1,14 @@
 <h1>Reviewers</h1><br>
 <h3>Sign Up!</h3>
-<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
-    <p>Name: </p><input type=text id='user_name' name="user[name]"><br> 
-    <p>Password: </p><input type=text id='password' name="user[password]"><br> 
-    <p>Password Confirmation: </p><input type=text id='user_password_confirmation' name="user[password_confirmation]"><br> 
-    <input type=submit value="Sign Up!">
+<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %><br>
+
+    <%= f.submit 'Create' %>
 <% end %> 

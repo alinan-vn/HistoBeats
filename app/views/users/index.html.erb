@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>HistoBeats</title>
-        <link rel="styleshee" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <header class="site-header">Reviewers</header>
-        
-        <p><strong>List of Reviewers</strong></p>
-        <ul>
-            <% @users.each do |user| %>
-                <li><%= link_to user.name, user_path(user) %></li>
-            <% end %>
-        </ul>
-
-        <br>
-        <aside class="site-sidebar">
-        <p><%= link_to 'login', login_path %></p>
-        <p><%= link_to 'sign up', new_user_path %></p>
-
-        <br>
-        <p><%= link_to 'Artists', artists_path %></p>
-        <p><%= link_to 'Songs', songs_path %></p>
-        <p><%= link_to 'Genres', genres_path %></p>
-        <p><%= link_to 'Reviews', reviews_path %></p>
-        </aside>
-        </div>
-    </body>
-
-</html>
+<h1>List of Reviewers</h1>
+<ul>
+    <% @users.each do |user| %>
+        <li><%= link_to user.name, user_path(user) %></li>
+    <% end %>
+</ul>
+<aside class="site-sidebar">
+    <%= link_to 'login', login_path %><br>
+    <%= link_to 'sign up', new_user_path %><br>
+    <%= link_to 'Artists', artists_path %><br>
+    <%= link_to 'Songs', songs_path %><br>
+    <%= link_to 'Genres', genres_path %><br>
+    <%= link_to 'Reviews', reviews_path %><br>
+</aside>

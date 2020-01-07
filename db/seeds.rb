@@ -80,3 +80,4 @@
 #     "Is This it", "The Modern Age", "Soma", "Take It or Leave It", "Trying Your Luck", "Someday", "Between Love and Hate", "Meet Me in the Bathroom", "Machuu Pichuu", "You're So Right", "80's Comedown Machine", "50/50", "Call It Fate, Call It Karma"
 # ]
 # strokes_songs.each {|s| Song.create(title: s, genre_id: 1, artist_id: 1)}
+
